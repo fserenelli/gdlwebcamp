@@ -618,17 +618,17 @@ p.numero {
 .testimoniales h2 {
   grid-column: 1 / 4;
 }
-div {
+.testimonial {
   background-color: #ffffff;
   border: .1rem solid #e1e1e1;
   position: relative;
 }
-div.p {
+.testimonial p {
   text-align: justify!important;
   font-family: 'PT Sans', sans-serif;
   padding: 0 3rem 0 6.5rem;
 }
-div.p:before {
+.testimonial p:before {
   content: '\201c';
   position: absolute;
   font-size: 13rem;
