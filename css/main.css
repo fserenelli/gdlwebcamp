@@ -130,7 +130,7 @@ h1 {
 }
 h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
@@ -155,6 +155,10 @@ h4 {
   font-size: 2.2rem;
   line-height: 1.4;
   margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: .2rem solid #fe4918;
+  padding-bottom: 1rem;
 }
 p {
   font-size: 2.2rem;
@@ -178,7 +182,7 @@ ul {
   margin: 0;
 }
 .seccion {
-  margin: 3rem auto;
+  margin: 3rem auto 6rem auto;
 }
 
 /** Botones **/
@@ -196,6 +200,12 @@ ul {
   text-decoration: none;
   transition: all .3s ease;
   border: .2rem solid #fe4918;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .button {
+    justify-self: center;
+  }
 }
 .button:hover {
   background-color: #e33000;
@@ -549,10 +559,16 @@ p.numero {
 
 .lista-precios {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
   text-align: center;
   align-items: center;
+  
+}
+@media (min-width: 768px) {
+  .lista-precios {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+  }
 }
 .tabla-precio {
   display: grid;
@@ -561,10 +577,13 @@ p.numero {
   padding: 4rem 0;
   transition: all .3s ease;
 }
-.tabla-precio:hover {
-  transform: scale(1.1);
-  border: .1rem solid #fe4918;
-  box-shadow: 0px 0px 5rem #666666;
+
+@media (min-width: 768px) {
+  .tabla-precio:hover {
+    transform: scale(1.1);
+    border: .1rem solid #fe4918;
+    box-shadow: 0px 0px 5rem #666666;
+  }
 }
 .tabla-precio h3 {
   text-transform: uppercase;
@@ -597,7 +616,6 @@ p.numero {
   content: '\f00c';
 }
 .lista-precios a {
-  justify-self: center;
   margin-top: 5rem;
 }
 
@@ -692,13 +710,15 @@ blockquote {
 }
 .newsletter .contenido h3 {
   text-transform: uppercase;
-  font-size: 10rem;
+  font-size: 5rem;
   font-family: 'PT Sans', sans-serif;
   color: #ffffff;
 }
 @media (min-width: 768px) {
   .newsletter a {
-    justify-self: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #ffffff;
   }
 }
 
@@ -719,6 +739,181 @@ blockquote {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/** Footer **/
+
+footer.site-footer {
+  background-color: #353535;
+  padding-top: 4rem;
+  margin-top: 2rem;
+}
+footer .contenedor {
+  display: grid;
+  color: #ffffff;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  footer .contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    grid-column-gap: 4rem;
+  }
+}
+footer.site-footer h3 {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+}
+footer h3 span {
+  color: #fe4918;
+}
+footer .footer-informacion p {
+  font-size: 1.8rem;
+}
+footer .ultimos-tweets li {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+footer .redes-sociales {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer.site-footer h3 {
+    text-align: left;
+  }
+  footer .redes-sociales {
+    text-align: left;
+  }
+}
+.copyright {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+
+/*** REGISTRO ***/
+
+/** Datos Usuario **/
+
+.registro {
+  display: grid;
+}
+form.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0 0 0;
+}
+form.registro label {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+form.registro input, form.registro select {
+  font-size: 1.8rem;
+}
+.caja {
+  background-color: #ffffff;
+  border: .1rem solid #e1e1e1;
+  padding: 1rem;
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  form .caja {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.campo {
+  padding: 2rem;
+}
+
+/** Paquetes **/
+
+.paquetes .orden {
+  display: grid;
+}
+.paquetes .tabla-precio:hover {
+  transform: none;
+  box-shadow: none;
+}
+.paquetes .tabla-precio input {
+  width: 10rem;
+  margin-top: 1rem;
+  justify-self: center;
+}
+
+/** Eventos **/
+
+.eventos .caja label {
+  font-weight: normal;
+  margin: 0 0 .5rem 0;
+}
+.eventos .caja label:first-child {
+  margin-top: 1rem;
+}
+.contenido-dia {
+  padding: 2rem;
+  /*display: none;*/
+}
+.contenido-eventos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+}
+.contenido-eventos p {
+  margin-top: 1rem;
+}
+.event {
+  display: grid;
+  grid-template-rows: repeat(auto, 1fr);
+}
+.event input {
+  margin-right: 1rem;
+}
+.event time {
+  color: #fe4918;
+  font-weight: bold;
+}
+
+/** Resumen Pagos **/
+
+.resumen p {
+  text-transform: uppercase;
+}
+form .resumen .caja {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.resumen .extras {
+  display: grid;
+  padding: 3rem;
+}
+.extras .orden {
+  margin-bottom: 1rem;
+}
+.extras .orden input {
+  margin-top: 1rem;
+}
+.resumen .total {
+  padding: 3rem;
+  text-align: center;
+}
+.resumen .total p {
+  margin: 1rem 0;
+}
+#btnRegistro {
+  margin: auto;
+}
+
+
+
 
 
  /* ==========================================================================
