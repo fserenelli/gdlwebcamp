@@ -247,6 +247,12 @@ nav.redes-sociales a {
   font-size: 2.5rem;
   padding: 0 1rem;
   color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .6s ease;
+}
+nav.redes-sociales a:hover {
+  color: #fe4918;
 }
 .informacion {
   display: grid;
