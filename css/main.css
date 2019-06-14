@@ -866,7 +866,7 @@ form.registro input, form.registro select {
 }
 .contenido-dia {
   padding: 2rem;
-  /*display: none;*/
+  display: none;
 }
 .contenido-eventos {
   display: grid;
@@ -913,6 +913,17 @@ form .resumen .caja {
 }
 .resumen .total p {
   margin: 1rem 0;
+}
+#lista-productos {
+  font-size: 1.8rem;
+  text-align: left;
+  background-color: #e1e1e1;
+  padding: 2rem;
+  display: none;
+}
+#suma-total {
+  font-size: 3.5rem;
+  color: #fe4918;
 }
 #btnRegistro {
   margin: auto;
