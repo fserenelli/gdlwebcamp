@@ -5,6 +5,19 @@
 
 	document.addEventListener('DOMContentLoaded', function(){
 
+		// MAPA //
+
+		var map = L.map('mapa').setView([-32.940921, -60.649048], 17);
+
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		L.marker([-32.940921, -60.649048]).addTo(map)
+    	.bindPopup('GdlWebCamp 2019 </br> Boletos ya diponibles.')
+    	.openPopup()
+
+
 		// VARIABLES //
 
 		// Campos datos usuario
