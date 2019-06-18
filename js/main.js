@@ -5,20 +5,22 @@
 
 	document.addEventListener('DOMContentLoaded', function(){
 
-		// MAPA //
+		/// MAPA ///
 
-		var map = L.map('mapa').setView([-32.940921, -60.649048], 17);
+		var mapa = document.querySelector('#mapa');
+		if (mapa) {
+			var map = L.map('mapa').setView([-32.940921, -60.649048], 17);
 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
 
-		L.marker([-32.940921, -60.649048]).addTo(map)
-    	.bindPopup('GdlWebCamp 2019 </br> Boletos ya diponibles.')
-    	.openPopup()
+			L.marker([-32.940921, -60.649048]).addTo(map)
+	    	 .bindPopup('GdlWebCamp 2019 </br> Boletos ya diponibles.')
+	    	 .openPopup();
+	    }
 
-
-		// VARIABLES //
+		/// VARIABLES ///
 
 		// Campos datos usuario
 
@@ -46,7 +48,7 @@
 		var camisas = document.querySelector('#camisa_evento');
 
 
-		// FUNCIONES //
+		/// FUNCIONES ///
 
 
 		// Calcular totales
