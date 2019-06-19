@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/all.min.css">
@@ -57,9 +57,9 @@
         <span></span>
       </div>
       <nav class="navegacion-principal">
-        <a href="#">Conferencia</a>
-        <a href="#">Calendario</a>
-        <a href="#">Invitados</a>
+        <a href="conferencia.html">Conferencia</a>
+        <a href="calendario.html">Calendario</a>
+        <a href="invitados.html">Invitados</a>
         <a href="registro.html">Reservaciones</a>
       </nav>
     </div>
@@ -102,6 +102,37 @@
               <p><i class="fas fa-user"></i> Juan Pablo de la Torre</p>
             </div>
           </div>
+          <!-- Talleres -->
+          <div id="conferencias" class="info-curso ocultar">
+            <div class="detalle-evento">
+              <h3>Como ser freelancer</h3>
+              <p><i class="fas fa-clock"></i> 10:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 10 de Dic</p>
+              <p><i class="fas fa-user"></i> Gregorio Sanchez</p>
+            </div>
+            <div class="detalle-evento">
+              <h3>Tecnologías del Futuro</h3>
+              <p><i class="fas fa-clock"></i> 17:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 10 de Dic</p>
+              <p><i class="fas fa-user"></i> Susan Sanchez</p>
+            </div>
+          </div>
+          <!-- Conferencias -->
+          <div id="seminarios" class="info-curso ocultar">
+            <div class="detalle-evento">
+              <h3>Diseño UI/UX para móviles</h3>
+              <p><i class="fas fa-clock"></i> 17:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 11 de Dic</p>
+              <p><i class="fas fa-user"></i> Harold García</p>
+            </div>
+            <div class="detalle-evento">
+              <h3>Aprende a programar en una mañana</h3>
+              <p><i class="fas fa-clock"></i> 10:00 hrs</p>
+              <p><i class="fas fa-calendar-alt"></i> 11 de Dic</p>
+              <p><i class="fas fa-user"></i> Susana Rivera</p>
+            </div>
+          </div>
+          <!-- Seminarios -->
           <a href="#" class="button">Ver todos</a>
         </div>
       </div>
@@ -153,10 +184,10 @@
   <div class="contador parallax">
     <div class="contenedor">
       <ul class="resumen-evento">
-        <li><p class="numero">6</p> Invitados</li>
-        <li><p class="numero">15</p> Talleres</li>
-        <li><p class="numero">3</p> Días</li>
-        <li><p class="numero">9</p> Conferencias</li>
+        <li><p class="numero">0</p> Invitados</li>
+        <li><p class="numero">0</p> Talleres</li>
+        <li><p class="numero">0</p> Días</li>
+        <li><p class="numero">0</p> Conferencias</li>
       </ul>
     </div>
   </div> <!-- Contador -->
@@ -252,10 +283,10 @@
     <h2>Faltan</h2>
     <div class="cuenta-regresiva">
       <ul>
-        <li><p class="numero">80</p> días</li>
-        <li><p class="numero">15</p> horas</li>
-        <li><p class="numero">5</p> minutos</li>
-        <li><p class="numero">30</p> segundos</li>
+        <li><p class="numero" id="dias"></p> días</li>
+        <li><p class="numero" id="horas"></p> horas</li>
+        <li><p class="numero" id="minutos"></p> minutos</li>
+        <li><p class="numero" id="segundos"></p> segundos</li>
       </ul>
     </div>
   </section> <!-- Cuenta Regresiva -->
@@ -290,7 +321,11 @@
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.js"><\/script>')</script>
+  <script src="js/jquery.animateNumber.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/jquery.waypoints.js"></script>
   <script src="js/plugins.js"></script>
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <script src="js/main.js"></script>

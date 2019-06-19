@@ -222,6 +222,13 @@ ul {
   border-color: #fe4918;
 }
 
+/** Lettering **/
+
+h1.nombre-sitio span {
+  position: relative;
+  text-shadow: 0 0 3rem #000000;
+}
+
 
 /*** INDEX ***/
 
@@ -302,6 +309,13 @@ p.slogan span {
   .barra {
     padding: .5rem 0;
   }
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .contenedor {
   display: grid;
@@ -427,8 +441,6 @@ section.programa {
 }
 nav.menu-programa {
   width: 100%;
-  border-bottom: 0.2rem solid #fe4918;
-  padding-bottom: 1rem;
   display: grid;
 }
 nav.menu-programa a {
@@ -440,6 +452,24 @@ nav.menu-programa a {
   padding: 0.5rem 0;
   width: 100%;
   font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #fe4918;
+}
+nav.menu-programa a.activo:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  height: 2rem;
+  width: 3rem;
+  bottom: -2rem;
+  background-image: url(../img/talleres-flecha.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+
 }
 @media (min-width: 768px) {
   nav.menu-programa {
@@ -629,6 +659,7 @@ p.numero {
 
 .mapa {
   height: 42rem;
+  z-index: 1;
 }
 
 /** Testimoniales **/
@@ -801,6 +832,34 @@ footer .redes-sociales {
   text-align: center;
   margin-top: 2rem;
   font-size: 1.3rem;
+}
+
+/*** CONFERENCIAS ***/
+
+/** Galería **/
+
+.conferencia .navegacion-principal .activo {
+  border-bottom: .2rem solid #fe4918;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  text-align: center;
+}
+.galeria a img {
+  width: 100%;
+}
+@media (min-width: 315px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .galeria {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 
